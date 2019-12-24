@@ -1,8 +1,11 @@
 {
   "name": "gerasim_vol",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A personal card for Vladimir Gerasimenko (@gerasim_vol)",
   "main": "/bin/card.js",
+  "bin": {
+    "gerasim_vol": "./bin/card.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gerasimvol/gerasim_vol_card.git"

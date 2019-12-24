@@ -10,53 +10,49 @@ const path = require('path')
 const options = {
   padding: 1,
   margin: 1,
-  borderStyle: 'round'
+  borderStyle: 'double'
 }
 
 // Text + chalk definitions
 const data = {
-  name: chalk.white('               Tierney Cyren'),
-  handle: chalk.white('bitandbang'),
-  work: chalk.white('Senior Cloud Developer Advocate at Microsoft'),
-  opensource: chalk.white('Node.js Community Committee ') + chalk.green('⬢'),
-  twitter: chalk.gray('https://twitter.com/') + chalk.cyan('bitandbang'),
-  npm: chalk.gray('https://npmjs.com/') + chalk.red('~bnb'),
-  github: chalk.gray('https://github.com/') + chalk.green('bnb'),
-  linkedin: chalk.gray('https://linkedin.com/in/') + chalk.blue('bitandbang'),
-  web: chalk.cyan('https://bnb.im'),
-  npx: chalk.red('npx') + ' ' + chalk.white('@bnb/card  (via GitHub Package Registry)'),
-  labelWork: chalk.white.bold('       Work:'),
-  labelOpenSource: chalk.white.bold('Open Source:'),
+  name: chalk.yellow.bold('            Vladimir Gerasimenko / gerasim_vol'),
+  work: chalk.yellow('Frontend engineer at Vintage Web Production'),
+  twitter: chalk.gray('https://twitter.com/') + chalk.blue('gerasim_vol'),
+  instagram: chalk.gray('https://instagram.com/') + chalk.red('gerasim_vol'),
+  github: chalk.gray('https://github.com/') + chalk.green('gerasimvol'),
+  linkedin: chalk.gray('https://linkedin.com/in/') + chalk.magenta('gerasimenkovladimir'),
+  web: chalk.gray('https://') + chalk.cyan('gerasimvol') + chalk.gray('.github.io'),
+  share: chalk.yellow('npx gerasim_vol'),
+  labelWork: chalk.white.bold('    Work:'),
   labelTwitter: chalk.white.bold('    Twitter:'),
-  labelnpm: chalk.white.bold('        npm:'),
-  labelGitHub: chalk.white.bold('     GitHub:'),
-  labelLinkedIn: chalk.white.bold('   LinkedIn:'),
-  labelWeb: chalk.white.bold('        Web:'),
-  labelCard: chalk.white.bold('       Card:')
+  labelInstagram: chalk.white.bold('    Instagram:'),
+  labelGitHub: chalk.white.bold('    GitHub:'),
+  labelLinkedIn: chalk.white.bold('    LinkedIn:'),
+  labelWeb: chalk.white.bold('    Web:'),
+  labelShare: chalk.white.bold('    Share:')
 }
 
 // Actual strings we're going to output
 const newline = '\n'
-const heading = `${data.name} / ${data.handle}`
+const heading = `${data.name}`
 const working = `${data.labelWork}  ${data.work}`
-const opensourcing = `${data.labelOpenSource}  ${data.opensource}`
 const twittering = `${data.labelTwitter}  ${data.twitter}`
+const instaing = `${data.labelInstagram}  ${data.instagram}`
 const npming = `${data.labelnpm}  ${data.npm}`
 const githubing = `${data.labelGitHub}  ${data.github}`
 const linkedining = `${data.labelLinkedIn}  ${data.linkedin}`
 const webing = `${data.labelWeb}  ${data.web}`
-const carding = `${data.labelCard}  ${data.npx}`
+const sharing = `${data.labelShare}  ${data.share}`
 
 // Put all our output together into a single variable so we can use boxen effectively
 const output = heading + // data.name + data.handle
                newline + newline + // Add one whole blank line
-               working + newline + // data.labelWork + data.work
-               opensourcing + newline + newline + // data.labelOpenSource + data.opensource
+               working + newline + newline +// data.labelWork + data.work
                twittering + newline + // data.labelTwitter + data.twitter
-               npming + newline + // data.labelnpm + data.npm
+               instaing + newline + // data.labelInstagram + data.instagram
                githubing + newline + // data.labelGitHub + data.github
                linkedining + newline + // data.labelLinkedIn + data.linkedin
-               webing + newline + newline + // data.labelWeb + data.web
-               carding // data.labelCard + data.npx
+               webing + newline + newline +// data.labelWeb + data.web
+               sharing // data.labelShare + data.share
 
-fs.writeFileSync(path.join(__dirname, 'bin/output'), chalk.green(boxen(output, options)))
+fs.writeFileSync(path.join(__dirname, 'bin/output'), chalk.yellow(boxen(output, options)))

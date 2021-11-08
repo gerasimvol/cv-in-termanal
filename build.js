@@ -15,12 +15,12 @@ const options = {
 
 // Text + chalk definitions
 const data = {
-  name: chalk.yellow.bold('            Vladimir Gerasimenko / gerasim_vol'),
-  work: chalk.yellow('Frontend engineer at Vintage Web Production'),
+  name: chalk.yellow.bold('            Volodymyr Gerasimenko / gerasim_vol'),
+  work: chalk.yellow('Frontend engineer at Wix'),
   twitter: chalk.gray('twitter.com/') + chalk.blue('gerasim_vol'),
   instagram: chalk.gray('instagram.com/') + chalk.red('gerasim_vol'),
   github: chalk.gray('github.com/') + chalk.green('gerasimvol'),
-  linkedin: chalk.gray('linkedin.com/in/') + chalk.magenta('gerasimenkovladimir'),
+  linkedin: chalk.gray('linkedin.com/in/') + chalk.magenta('volodymyrgerasimenko'),
   web: chalk.cyan('gerasimvol') + chalk.gray('.github.io'),
   share: chalk.yellow('npx gerasim_vol'),
   labelWork: chalk.white.bold('    Work:'),
@@ -46,13 +46,13 @@ const sharing = `${data.labelShare}  ${data.share}`
 
 // Put all our output together into a single variable so we can use boxen effectively
 const output = heading + // data.name + data.handle
-               newline + newline + // Add one whole blank line
-               working + newline + newline +// data.labelWork + data.work
-               twittering + newline + // data.labelTwitter + data.twitter
-               instaing + newline + // data.labelInstagram + data.instagram
-               githubing + newline + // data.labelGitHub + data.github
-               linkedining + newline + // data.labelLinkedIn + data.linkedin
-               webing + newline + newline +// data.labelWeb + data.web
-               sharing // data.labelShare + data.share
+  newline + newline + // Add one whole blank line
+  working + newline + newline +// data.labelWork + data.work
+  twittering + newline + // data.labelTwitter + data.twitter
+  instaing + newline + // data.labelInstagram + data.instagram
+  githubing + newline + // data.labelGitHub + data.github
+  linkedining + newline + // data.labelLinkedIn + data.linkedin
+  webing + newline + newline +// data.labelWeb + data.web
+  sharing // data.labelShare + data.share
 
 fs.writeFileSync(path.join(__dirname, 'bin/output'), chalk.yellow(boxen(output, options)))

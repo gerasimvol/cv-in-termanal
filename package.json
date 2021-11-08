@@ -1,7 +1,7 @@
 {
   "name": "gerasim_vol",
   "version": "1.1.0",
-  "description": "A personal card for Vladimir Gerasimenko (@gerasim_vol)",
+  "description": "A personal card for Volodymyr Gerasimenko (@gerasim_vol)",
   "main": "/bin/card.js",
   "bin": {
     "gerasim_vol": "./bin/card.js"
